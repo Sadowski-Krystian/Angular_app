@@ -1,1 +1,14 @@
 <p>header works!</p>
+<div class="cal">
+    <label>Nazwisko=&gt;</label>
+    <input type="text" #nazwisko>
+    <label>Imie=&gt;</label>
+    <input type="text" #imie>
+    <label>Numer telefonu=&gt;</label>
+    <input type="text" #telefon>
+    <br>
+    <label>Termin=&gt;</label>
+    <input type="date" #data>
+    <input type="tine" #czas>
+    <button (click)="makeReservation(nazwisko.value, imie.value, telefon.value, data.value, czas.value)">Zarezerwuj termin</button>
+</div>

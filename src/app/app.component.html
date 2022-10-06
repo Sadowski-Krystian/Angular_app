@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (dateTimeEvent)="getDateTime($event)"></app-header>
 <p (click)="mojaMetoda()">Hello World!</p>
 <img src="./../assets/zsegw.png" alt="jakiś obrazek">
-<app-main></app-main>
+<app-main [dateTime]="dateTime"></app-main>
