@@ -1,1 +1,20 @@
 <p>main works!</p>
+<form [formGroup] = "regForm" (ngSubmit) = "onSubmit(regForm)">
+    <div class="cal">
+        <label>Nazwisko=&gt;</label>
+        <input type="text" formControlName="nazwisko">
+        <div>Podaj nazwisko</div><br><br>
+        <label>Imie=&gt;</label>
+        <input type="text" formControlName="imie">
+        <div>Podaj imię</div><br><br>
+        <label>Numer telefonu=&gt;</label>
+        <input type="text" formControlName="telefon">
+        <div>Podaj numer telefonu</div><br><br>
+        <label>Termin=&gt;</label>
+        <input type="date" formControlName="data">
+        <input type="time" formControlName="time">
+        <div>Podaj datę i czas</div><br><br>
+        
+    </div>
+    <button type="submit" [disabled]="regForm.invalid" >Zarezerwuj termin</button>
+</form>
